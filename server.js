@@ -3,7 +3,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 80;
 
 //middleware
 
@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 var MongoClient = mongodb.MongoClient;
 
 //Connection where Mongo is running
-var mongoUrl = 'mongodb://localhost:27017/gettingLate_db';
+// var mongoUrl = 'mongodb://localhost:27017/gettingLate_db'; // For local
+var mongoUrl = 'mongodb://heroku_t4dwngxj:ou7c4bufgjd0vte17dk270b5rb@ds031915.mlab.com:31915/heroku_t4dwngxj';
 
 //starting with the backend routes
 
@@ -82,6 +83,6 @@ app.get('/gettingLate', function(request, response){
 });
 
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
   console.log('listen to events on a "port".');
 });
