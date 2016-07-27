@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Shreiya/api-calling-BE/issues"
   },
-  "homepage": "https://github.com/Shreiya/api-calling-BE#readme"
+  "homepage": "https://github.com/Shreiya/api-calling-BE#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.4"
+  }
 }
